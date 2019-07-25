@@ -95,7 +95,7 @@ namespace MinecraftClient.ChatBots
                     string name = split[5];
                     name = name.Remove(name.Length - 1);
                     text = text.Remove(text.Length - 1);
-                    BroadcastFactionMessage(name.ToUpper() + " DEPOSITED " + split[0] + ".00");
+                    BroadcastFactionMessage(name + " deposited " + split[0] + ".00");
 
                     string json = GetDepositedJson(name, split[0], Settings.botname, Settings.iconurl);
                     SendWebReq(Settings.fbankurl, json);
